@@ -5,17 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Istanbul Tourism</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Montserrat', 'Roboto', 'Segoe UI', Arial, sans-serif; }
+    header { position: sticky; top: 0; z-index: 10; animation: fadeDown 0.9s; }
+    @keyframes fadeDown { from { opacity: 0; transform: translateY(-32px);} to { opacity: 1; transform: none; } }
+    .gallery img { transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s; }
+    .gallery img:hover { transform: scale(1.07) rotate(-1deg); box-shadow: 0 8px 32px rgba(60,47,35,0.18); }
+    section { animation: fadeUp 0.7s; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(30px);} to { opacity: 1; transform: none; } }
+    nav { display: flex; gap: 2rem; justify-content: center; margin-bottom: 2rem; }
+    nav a { color: #8d735b; text-decoration: none; font-weight: 500; padding: 0.5rem 1rem; border-radius: 8px; transition: background 0.2s; }
+    nav a:hover { background: #ede3d2; }
+  </style>
 </head>
 <body>
   <header>
     <h1>Discover Istanbul</h1>
     <p>The city where continents meet, history breathes, and beauty endures.</p>
+    <nav>
+      <a href="#history">History</a>
+      <a href="#sights">Top Sights</a>
+      <a href="#facts">Quick Facts</a>
+      <a href="#gallery">Gallery</a>
+    </nav>
   </header>
-  <section>
+  <section id="history">
     <h2>History</h2>
     <p>Istanbul, formerly Byzantium and Constantinople, is a city that has been the capital of three empires: Roman, Byzantine, and Ottoman. Its unique location on both Europe and Asia has made it a crossroads of civilizations for over 2,500 years.</p>
   </section>
-  <section>
+  <section id="sights">
     <h2>Top Sights</h2>
     <ul>
       <li><b>Hagia Sophia</b> – A marvel of architecture, once a church, mosque, and now a museum.</li>
@@ -23,9 +42,10 @@
       <li><b>Bosphorus</b> – The strait dividing Europe and Asia, best seen by ferry.</li>
       <li><b>Grand Bazaar</b> – One of the world’s oldest and largest covered markets.</li>
       <li><b>Galata Tower</b> – Offers panoramic views of the city skyline.</li>
+      <li><b>Maiden's Tower</b> – Iconic tower on a Bosphorus islet, shrouded in legend.</li>
     </ul>
   </section>
-  <section>
+  <section id="facts">
     <h2>Quick Facts</h2>
     <div class="quick-facts">
       <div class="quick-fact"><b>Population</b><br>15M+</div>
@@ -36,20 +56,21 @@
       <div class="quick-fact"><b>UNESCO Sites</b><br>4</div>
     </div>
   </section>
-  <section>
+  <section id="gallery">
     <h2>Gallery</h2>
     <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Hagia Sophia">
-      <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Blue Mosque">
-      <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=80" alt="Bosphorus">
+      <img src="images/istanbul1.jpg" alt="Hagia Sophia">
+      <img src="images/istanbul2.jpg" alt="Blue Mosque">
+      <img src="images/istanbul3.jpg" alt="Bosphorus">
+      <img src="images/maiden-tower.jpg" alt="Maiden's Tower" title="Maiden's Tower (Pixabay)">
       <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=600&q=80" alt="Grand Bazaar">
       <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" alt="Galata Tower">
-      <img src="https://images.unsplash.com/photo-1524492449090-1a064cec1dfa?auto=format&fit=crop&w=600&q=80" alt="Maiden's Tower">
       <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=600&q=80" alt="Ortaköy Mosque">
     </div>
+    <p style="font-size:0.9rem;color:#9b8772;margin-top:1rem;">Maiden's Tower image &copy; <a href="https://pixabay.com/photos/maiden-tower-turkey-tower-istanbul-2426488/" target="_blank" rel="noopener" style="color:#8d735b;">Pixabay</a></p>
   </section>
   <footer>
-    &copy; 2026 Istanbul Tourism Guide. Made with ❤️ in shades of beige, white, and brown.
+    &copy; 2026 Istanbul Tourism Guide. Made with ❤️ and Gloamy.
   </footer>
 </body>
 </html>

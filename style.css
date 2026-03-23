@@ -1,7 +1,7 @@
 body {
-  background: #f8f5f0;
+  background: linear-gradient(135deg, #f8f5f0 70%, #ede3d2 100%);
   color: #3c2f23;
-  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Montserrat', 'Roboto', 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -11,26 +11,31 @@ header {
   padding: 2rem 0 1.5rem 0;
   text-align: center;
   box-shadow: 0 2px 8px rgba(60,47,35,0.04);
+  border-bottom: 2px solid #e5d3b3;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.7rem;
   color: #6e5841;
   margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
 }
 
 h2 {
   color: #8d735b;
   margin-top: 2rem;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
 }
 
 section {
-  max-width: 900px;
+  max-width: 950px;
   margin: 2rem auto;
   background: #fffaf5;
-  border-radius: 16px;
-  box-shadow: 0 4px 32px rgba(60,47,35,0.05);
-  padding: 2rem;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(60,47,35,0.08);
+  padding: 2.2rem;
+  border: 1px solid #e5d3b3;
 }
 
 .gallery {
@@ -42,9 +47,11 @@ section {
 
 .gallery img {
   width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(60,47,35,0.10);
+  border-radius: 14px;
+  box-shadow: 0 2px 18px rgba(60,47,35,0.16);
   background: #ede3d2;
+  aspect-ratio: 4/3;
+  object-fit: cover;
 }
 
 footer {
@@ -62,12 +69,43 @@ footer {
 }
 
 .quick-fact {
-  background: #ede3d2;
-  border-radius: 10px;
+  background: linear-gradient(120deg, #ede3d2 80%, #fffaf5 100%);
+  border-radius: 12px;
   padding: 1.2rem 2rem;
-  font-size: 1.1rem;
+  font-size: 1.13rem;
   color: #6e5841;
   flex: 1 1 160px;
   text-align: center;
-  box-shadow: 0 1px 8px rgba(60,47,35,0.04);
+  box-shadow: 0 1px 8px rgba(60,47,35,0.06);
+  border: 1px solid #e5d3b3;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.quick-fact:hover {
+  box-shadow: 0 4px 24px rgba(60,47,35,0.18);
+  transform: translateY(-3px) scale(1.04);
+}
+
+nav {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+nav a {
+  color: #8d735b;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+  font-size: 1.1rem;
+}
+nav a:hover {
+  background: #f8e6c1;
+  color: #6e5841;
+}
+
+@media (max-width: 700px) {
+  section { padding: 1.1rem; }
+  .gallery { grid-template-columns: 1fr; }
+  .quick-facts { gap: 1rem; }
 }
